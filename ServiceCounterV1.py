@@ -1,8 +1,9 @@
 import os, time
-# Variables for the name of the customer, make and model of the vehicle, and the mileage of the vehicle.
+
 isShopping = False
 cost = 0
-
+smallDent = 0
+largeDent = 0
 
 def shop():
     if isShopping is True:
@@ -49,12 +50,28 @@ Please type 1-4 to choose category and a-c for service (ex. 1-a) : """)
             cost = cost + 30
         elif services == "1-c":
             cost = cost + 45
+        elif services == "2-a":
+            cost = cost + 120
+        elif services == "3-a":
+            cost = cost + 69.99
+        elif services == "3-b":
+            cost = cost + 39.99
+        elif services == "4-a":
+            time.sleep(1)
+            sDents = int(input("How many small dents would you like to remove? :"))
+            smallDent = sDents * 5
+        elif services == "4-b":
+            lDents = int(input("How many large dents would you like to remove? :")) 
+            largeDent = lDents * 5
+
+        
+        
         
 
 
 
 enter = input("Welcome to The WACTC Garage! Do you require any services? : ")
-if enter == "yes":
+if enter == "yes" or "Yes" or "y":
     isShopping = True
     time.sleep(1)
     shop()
