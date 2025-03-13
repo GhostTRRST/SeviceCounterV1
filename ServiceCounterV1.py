@@ -63,6 +63,8 @@ Please type 1-4 to choose category and a-c for service (ex. 1-a) : """)
         elif services == "4-b":
             lDents = int(input("How many large dents would you like to remove? :")) 
             largeDent = lDents * 5
+        elif services == "1-a/1-b":
+            cost = cost + 109.99
 
         
         
