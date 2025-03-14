@@ -35,6 +35,7 @@ def shop():
 
         #services that are included along with their prices. The customer can choose what service by using letters and numbers
         services = input("""The services we give include :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~             
                          
 Oil change and tire rotation :
                           
@@ -55,6 +56,8 @@ Dent removal :
                     
 $5.00 per small dent
 $15.00 per large dent
+                         
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Please type 1-4 to choose category and a-c for service (ex. 1-a) : """)
         global service, largeDent, smallDent, smallWind, largeWind
@@ -92,12 +95,16 @@ Please type 1-4 to choose category and a-c for service (ex. 1-a) : """)
             largeDent = lDents * 15
             cost = cost + largeDent
             service = "large dent removal"
-
+        time.sleep(1)
+        os.system("clear")
+        time.sleep(3)
 
         print(f"""
 
+        Company: WACTC Garage
+       
         Date: {date}
-        Customer number: {cNum}      
+        Customer number: {cNum}
         Name: {name}
         Vehicle make+model: {makeModel}
         Mileage: {mileage}
@@ -105,8 +112,7 @@ Please type 1-4 to choose category and a-c for service (ex. 1-a) : """)
         service: {service}
         Total: {cost}
 
-
-
+        Thank you {name} for buying from us!
 """)
         
         
